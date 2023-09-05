@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
     <style>
@@ -27,12 +28,12 @@
             padding: 0;
         }
 
-        swiper-container {
+        .swiper-container {
             width: 100%;
             height: 100%;
         }
 
-        swiper-slide {
+        .swiper-slide {
             text-align: center;
             font-size: 18px;
             background: #fff;
@@ -41,7 +42,7 @@
             align-items: center;
         }
 
-        swiper-slide img {
+        .swiper-slide .swiper-zoom-container img {
             display: block;
             width: 100%;
             height: 100%;
@@ -86,8 +87,9 @@
         </swiper-slide>
     </swiper-container>
 
+    <div class="swiper-pagination"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
     <script>
         var swiper = new Swiper('.mySwiper', {
             direction: 'vertical',
@@ -95,7 +97,12 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            zoom: true // 줌 옵션 활성화
+            zoom: {
+                enabled: true,  // 줌 활성화
+                maxRatio: 3,  // 최대 줌 비율
+                touchRatio: 0.5,  // 줌 제스처의 감도 조절
+                toggle: true,  // 두 번 탭하여 줌을 활성화/비활성화
+            }
         });
     </script>
 </body>

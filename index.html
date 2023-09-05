@@ -6,6 +6,9 @@
     <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
     <style>
         html,
         body {
@@ -49,17 +52,52 @@
 
 <body>
 
-    <swiper-container class="mySwiper" direction="vertical" pagination="true" pagination-clickable="true">
-        <swiper-slide><img src="./img/1.jpg" alt="1"></swiper-slide>
-        <swiper-slide><img src="./img/2.jpg" alt="2"></swiper-slide>
-        <swiper-slide><img src="./img/3.jpg" alt="3"></swiper-slide>
-        <swiper-slide><img src="./img/4.jpg" alt="4"></swiper-slide>
-        <swiper-slide><img src="./img/5.jpg" alt="5"></swiper-slide>
-        <swiper-slide><img src="./img/6.jpg" alt="6"></swiper-slide>
+    <swiper-container class="mySwiper swiper-container" direction="vertical" pagination="true"
+        pagination-clickable="true">
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/1.jpg" alt="1">
+            </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/2.jpg" alt="2">
+            </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/3.jpg" alt="3">
+            </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/4.jpg" alt="4">
+            </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/5.jpg" alt="5">
+            </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="./img/6.jpg" alt="6">
+            </div>
+        </swiper-slide>
     </swiper-container>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            direction: 'vertical',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            zoom: true // 줌 옵션 활성화
+        });
+    </script>
 </body>
 
 </html>

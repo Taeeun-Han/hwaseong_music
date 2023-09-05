@@ -6,35 +6,85 @@
     <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./main.js"></script>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            overflow: hidden;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="./img/1.jpg">
-                </div>
+    <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+        zoom="true" direction="vertical" pagination="true" pagination-clickable="true">
+
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="/img/1.jpg" />
             </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="/img/2.jpg">
-                </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="/img/2.jpg" />
             </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container">
-                    <img src="/img/3.jpg">
-                </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="/img/3.jpg" />
             </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="/img/4.jpg" />
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="/img/5.jpg" />
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <div class="swiper-zoom-container">
+                <img src="./img/6.jpg" />
+            </div>
+        </swiper-slide>
+
+    </swiper-container>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
